@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+<main>
+    <section class="login-container">
+        <form class="login-form" action="/login" method="post" autocomplete="off">
+            <h2>Login</h2>
+            <p>Welcome to your DashBoard</p>
+            <div class="input-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" id="inputEmail" name="email" placeholder="Email" required pattern=".+@.+\.com">
+            </div>
+            <div class="input-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" name="password" placeholder="Password" required minlength="8">
+            </div>
+            <div class="button-container">
+                <button type="submit" class="login-button">Login</button>
+                <a href="/register" class="sign-up-button">Sign Up</a>
+            </div>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>
